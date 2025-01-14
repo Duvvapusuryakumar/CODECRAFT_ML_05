@@ -1,0 +1,10 @@
+# Example of loading data from extracted files
+import pandas as pd
+from tensorflow.keras.utils import load_img, img_to_array
+
+# Load the CSV
+data = pd.read_csv("extracted_folder/indian_food.csv")
+
+# Load the image
+img = load_img("C:/Users/Surya/Downloads/CODECRAFT_ML_05/archive (3)", target_size=(224, 224))
+img_array = img_to_array(img) / 255.0
